@@ -1,20 +1,52 @@
-#include <sdio.h
+#include <stdio.h>
 int main(){
 
-/*Argentina*/
-printf("Numero da carta A01 \n");
-printf("País: Argentina\n ");
-printf("Estado: Bueno Aires\n ");
-printf("Cidade: La Plata \n");
+//Pais Argentina,
+char NomeDoPaís[10]= "Argentina";
+printf("País: %s \n",NomeDoPaís);
 
-float Populacao =923.715; 
-float Área = 203;
-float Pib = 19,6;
-float PontosTuristicos = 50;
+//Estado
+char EstadoDoPais[15] = "Bueno Aires" ;
+printf("Estado: %s \n", EstadoDoPais);
 
-printf("Populacao: %.3f Populacao \n", Populacao);
-printf("Área: %.0f Km \n" ,Área);
-printf("Pib: %.1f bilhões \n", Pib);
-printf("PontosTuristicos: %.0f pontos\n", PontosTuristicos);
+//Codigo da carta
+char codigodacarta[4] = "A01";
+printf("Código da carta: %s \n", codigodacarta);
+
+//Nome da cidade
+char Cidade[10]="La Plata";
+printf("Cidade: %s \n",Cidade);
+
+//População
+float NumeroDeAbitantes=923.715;
+printf("População :%.3f \n",NumeroDeAbitantes);
+
+//Área
+int Area = 	940;
+printf("Área em Km²: %d \n", Area);
+
+//Pib
+//o valor da econimia esta em pesos Argentina se converter em dolár e 640,59 bilhões USD
+float econimia=678.000000000000;
+printf("Pib do País: %.12f \n",econimia);
+
+//Turisticos
+int Pontos= 50;
+printf("Pontos Turisticos: %d \n",Pontos);
+
+//Densidade
+float Densidade;
+Densidade = NumeroDeAbitantes / Area;
+printf("Densidade:%f\n", Densidade);
+
+//PIB Capital
+float PIBCapital;
+PIBCapital = econimia / NumeroDeAbitantes;
+printf("PIB capital: %f \n", PIBCapital);
+
+
+
+
+
 
 }
