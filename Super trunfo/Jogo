@@ -1,52 +1,154 @@
 #include <stdio.h>
-int main(){
 
-//Pais Argentina,
-char NomeDoPaís[10]= "Argentina";
-printf("País: %s \n",NomeDoPaís);
+int main() {
+// País Argentina
+char NomeDoPaís1[20] = "Argentina";
+printf("País: %s \n", NomeDoPaís1);
 
-//Estado
-char EstadoDoPais[15] = "Bueno Aires" ;
-printf("Estado: %s \n", EstadoDoPais);
+// Estado
+char EstadoDoPaís1[20] = "Buenos Aires";
+printf("Estado: %s \n", EstadoDoPaís1);
 
-//Codigo da carta
-char codigodacarta[4] = "A01";
-printf("Código da carta: %s \n", codigodacarta);
+// Código da carta
+char CodigoDaCarta1[5] = "A01";
+printf("Código da carta: %s \n", CodigoDaCarta1);
 
-//Nome da cidade
-char Cidade[10]="La Plata";
-printf("Cidade: %s \n",Cidade);
+// Nome da cidade
+char Cidade1[20] = "La Plata";
+printf("Cidade: %s \n", Cidade1);
+
+//-------------------------------------------------//
+
+// População
+float População1 = 923715;
+printf("População: %f \n", População1);
+
+// Área
+int Área1 = 940;
+printf("Área em Km²: %d \n", Área1);
+
+//PIB (o valor do PIB de La Plata estava em pesos e coloquei em real para facilitar na hora do calculo)
+long long int PIB1 = 3661200000000;
+printf("PIB da Cidade: %lld \n", PIB1);
+
+// Pontos Turísticos
+int Pontos1 = 50;
+printf("Pontos Turísticos: %d \n", Pontos1);
+
+// Densidade
+float Densidade1;
+Densidade1 = População1 / Área1;
+printf("Densidade: %f\n", Densidade1);
+
+// Inverso da Densidade
+float InversoDensidade1;
+InversoDensidade1 = (float) Área1 / População1;// o resultado e 0.001018
+
+// PIB per Capita
+float PIBCapital1;
+PIBCapital1 = (float) PIB1 / População1;
+printf("PIB per Capita: %f \n", PIBCapital1);
+
+// Super poder
+float SuperPoder1;
+SuperPoder1 = População1 + Área1 + PIB1 + Pontos1 + PIBCapital1 + InversoDensidade1;
+printf("Super poder: %f \n", SuperPoder1);
+
+//----------------------------xxxx----------------------------//
+
+// País Brasil
+char NomeDoPaís2[20] = "Brasil";
+printf("País: %s \n", NomeDoPaís2);
+
+// Estado
+char EstadoDoPaís2[20] = "São Paulo";
+printf("Estado: %s \n", EstadoDoPaís2);
+
+// Código da carta
+char CodigoDaCarta2[5] = "B01";
+printf("Código da carta: %s \n", CodigoDaCarta2);
+
+// Nome da cidade
+char cidade[20] = "São Paulo";
+printf("Cidade: %s \n", cidade);
+
+//-------------------------------------------------//
+
+// População
+int População2 = 22806700;
+printf("População: %d \n", População2);
+
+// Área
+float Área2 = 7946.84;
+printf("Área em Km²: %f \n", Área2);
+
+// PIB
+long long int PIB2 = 828980000000;
+printf("PIB da Cidade: %lld \n", PIB2);
+
+// Pontos Turísticos
+int Pontos2 = 36;
+printf("Pontos Turísticos: %d \n", Pontos2);
+
+// Densidade
+float Densidade2;
+Densidade2 = População2 / Área2;
+printf("Densidade: %f\n", Densidade2);
+
+// Inverso da Densidade
+float InversoDensidade2;
+InversoDensidade2 = Área2 / População2; // o valor e 0.000348
+    
+// PIB per Capita
+float PIBCapital2;
+PIBCapital2 = (float)PIB2 / População2;
+printf("PIB da Capita: %f \n", PIBCapital2);
+
+// Super poder
+float SuperPoder2;
+SuperPoder2 = População2 + Área2 + PIB2 + Pontos2 + PIBCapital2 + InversoDensidade2;
+printf("Super poder: %f \n", SuperPoder2);
+
+//---------------------------xx---------------------------//
+
+//Resultados
+int Resultados;
+printf("Resultados das cartas  \n",Resultados);
 
 //População
-float NumeroDeAbitantes=923.715;
-printf("População :%.3f \n",NumeroDeAbitantes);
+int ResultadoDaPopulação;
+ResultadoDaPopulação= População1 > População2;
+printf("Resultado da população:%d \n",ResultadoDaPopulação);
 
 //Área
-int Area = 	940;
-printf("Área em Km²: %d \n", Area);
+int ResultadoDaÁrea;
+ResultadoDaÁrea= Área1> Área2;
+printf("Resultado da área: %d \n",ResultadoDaÁrea);
+   
+//PIB
+int ResultadoDoPIB;
+ResultadoDoPIB= PIB1 > PIB2;
+printf("Resultado do PIB: %d \n",ResultadoDoPIB);
 
-//Pib
-//o valor da econimia esta em pesos Argentina se converter em dolár e 640,59 bilhões USD
-float econimia=678.000000000000;
-printf("Pib do País: %.12f \n",econimia);
-
-//Turisticos
-int Pontos= 50;
-printf("Pontos Turisticos: %d \n",Pontos);
+//Pontos Turísticos
+int ResultadoTuristico;
+ResultadoTuristico= Pontos1>Pontos2;
+printf("Resultado dos pontos turísticos: %d \n",ResultadoTuristico);
 
 //Densidade
-float Densidade;
-Densidade = NumeroDeAbitantes / Area;
-printf("Densidade:%f\n", Densidade);
+int ResultadoDensidade;
+ResultadoDensidade= Densidade1 < Densidade2;
+printf("Resultado da Densidade:%d \n",ResultadoDensidade);
 
-//PIB Capital
-float PIBCapital;
-PIBCapital = econimia / NumeroDeAbitantes;
-printf("PIB capital: %f \n", PIBCapital);
-
-
-
-
-
-
+//PIB Capita
+int ResultadoPIBCapital;
+ResultadoPIBCapital= PIBCapital1 > PIBCapital2;
+printf("Resultado do PIB capital: %d \n ",ResultadoPIBCapital); 
+ 
+//Super poder 
+ int ResultadoSuperPoder;
+ ResultadoSuperPoder= SuperPoder1 > SuperPoder2 ;
+ printf("Resultado Super poder: %d \n", ResultadoSuperPoder);
+ 
+    return 0;
 }
