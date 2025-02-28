@@ -113,42 +113,71 @@ printf("Super poder: %f \n", SuperPoder2);
 
 //Resultados
 int Resultados;
-printf("Resultados das cartas  \n",Resultados);
+printf(" ########### Resultados das cartas ###########  \n",Resultados);
 
 //População
-int ResultadoDaPopulação;
-ResultadoDaPopulação= População1 > População2;
-printf("Resultado da população:%d \n",ResultadoDaPopulação);
+if(População1 > População2){
+printf("A população da cidade La Plata venceu!! \n");
+}else if(População1 < População2){
+printf("A população da cidade São Paulo venceu!! \n");
+}else{
+    printf("Teve um empate\n");
+}
 
 //Área
-int ResultadoDaÁrea;
-ResultadoDaÁrea= Área1> Área2;
-printf("Resultado da área: %d \n",ResultadoDaÁrea);
-   
+if(Área1 > Área2){
+printf("A área da cidade La Plata venceu!! \n");
+}else if(Área1 < Área2){
+    printf("A área da cidade São Paulo venceu!! \n");
+}else{
+    printf("Teve um empate\n");
+}
+
+
 //PIB
-int ResultadoDoPIB;
-ResultadoDoPIB= PIB1 > PIB2;
-printf("Resultado do PIB: %d \n",ResultadoDoPIB);
-
+if(PIB1 > PIB2){
+printf("O PIB da cidade La Plata venceu!! \n");
+}else if(PIB1 < PIB2){
+    printf("O PIB da cidade São Paulo venceu!! \n");
+}else{
+    printf("Teve um empate\n");
+}
 //Pontos Turísticos
-int ResultadoTuristico;
-ResultadoTuristico= Pontos1>Pontos2;
-printf("Resultado dos pontos turísticos: %d \n",ResultadoTuristico);
-
+if(Pontos1>Pontos2){
+printf("A quantidade de pontos Turísticos da cidade La Plata venceu!! \n");
+}else if(Pontos1<Pontos2){
+    printf("A quantidade de pontos Turísticos da cidade São Paulo venceu!!");
+}else{
+    printf("Teve um empate");
+}
 //Densidade
-int ResultadoDensidade;
-ResultadoDensidade= Densidade1 < Densidade2;
-printf("Resultado da Densidade:%d \n",ResultadoDensidade);
+if(Densidade1 < Densidade2){
+printf("A densidade da cidade São Paulo venceu!!  \n");
+}else if(Densidade1 > Densidade2){
+    printf("A densidade da cidade La Plata venceu!!");
+}else{
+    printf("Teve um empate");
+}
+
 
 //PIB Capita
-int ResultadoPIBCapital;
-ResultadoPIBCapital= PIBCapital1 > PIBCapital2;
-printf("Resultado do PIB capital: %d \n ",ResultadoPIBCapital); 
- 
+if(PIBCapital1 > PIBCapital2){
+printf("O Pib capita da cidade La Plata venceu!! \n "); 
+}else if(PIBCapital1 < PIBCapital2){
+    printf("O Pib capita da cidade São Paulo venceu!! \n ");
+}else{
+    printf("Teve um empate \n");
+}
+
+
 //Super poder 
- int ResultadoSuperPoder;
- ResultadoSuperPoder= SuperPoder1 > SuperPoder2 ;
- printf("Resultado Super poder: %d \n", ResultadoSuperPoder);
+ if(SuperPoder1 > SuperPoder2){
+    printf("O Poder da cidade La Plata venceu!! \n");
+ }else if(SuperPoder1 < SuperPoder2){
+    printf("O Poder da Cidade São Paulo venceu!! \n");   
+ } else{
+     printf("Teve um empate \n");
+ }
  
     return 0;
 }
